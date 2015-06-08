@@ -4,7 +4,7 @@
   "keywords": ["yii2", "helper"],
   "type": "yii2-extension",
   "license": "proprietary",
-  "homepage": "https://bitbucket.org/webtoolsnz/yii2-helpers",
+  "homepage": "https://github.com/webtoolsnz/yii2-helpers",
   "authors": [
     {
       "name": "Byron Adams",
