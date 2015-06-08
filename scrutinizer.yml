@@ -1,0 +1,25 @@
+build:
+    environment:
+        php: '5.4.28'
+    cache:
+        directories:
+            - '~/.composer/'
+    dependencies:
+            before:
+              - composer global require "fxp/composer-asset-plugin:~1.0"
+filter:
+    excluded_paths: [tests/*]
+tools:
+    php_analyzer: true
+    php_code_coverage: true
+    php_code_sniffer:
+        config:
+            standard: PSR2
+        filter:
+            paths: ['src']
+    php_loc:
+        enabled: true
+        excluded_dirs: [vendor, tests]
+    php_cpd:
+        enabled: true
+        excluded_dirs: [vendor, tests]
