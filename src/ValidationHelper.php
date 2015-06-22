@@ -2,10 +2,10 @@
 namespace webtoolsnz\helpers;
 
 /**
- * Class Validation
+ * Class ValidationHelper
  * @package webtoolsnz\helpers
  */
-class Validation
+class ValidationHelper
 {
     /**
      * Deletes either an entire rule, or just some fields from a specified rule.
