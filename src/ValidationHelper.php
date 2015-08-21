@@ -15,7 +15,7 @@ class ValidationHelper
      *
      * @param Array $rules - Rules to modify
      * @param String $target_rule - The rule to target
-     * @param (optional) Mixed $fields - fields to remove from target rule.
+     * @param string|[] $fields - fields to remove from target rule.
      *
      * @return array $rules
      */
