@@ -1,0 +1,30 @@
+name: continuous-integration
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup PHP
+        uses: shivammathur/setup-php@master
+        with:
+          php-version: '7.3'
+          extension-csv: mbstring,bcmath,curl,gettext,exif,intl,opcache,pdo_mysql
+          ini-values-csv: pcov.directory=./
+          coverage: pcov
+      - name: Composer Cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer-cache
+          key: ${{ runner.OS }}-composer-cache
+      - name: Composer
+        run: |
+          composer config cache-files-dir ~/.composer-cache
+          composer install --no-progress --no-suggest --prefer-dist --optimize-autoloader
+      - name: PHPUnit
+        run: ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
