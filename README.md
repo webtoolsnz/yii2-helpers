@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 Install using the following command.
 
-`composer require webtoolsnz/yii2-helpers dev-master`
+`composer require webtoolsnz/yii2-helpers`
 
 Alternatively 
 
@@ -18,12 +18,6 @@ Add the following to your `composer.json` file.
 
 ~~~
     "require" : {
-        "webtoolsnz/yii2-helpers": "dev-master"
+        "webtoolsnz/yii2-helpers": "^1.1"
     }, 
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.webtools.nz"
-        }
-    ]
 ~~~
